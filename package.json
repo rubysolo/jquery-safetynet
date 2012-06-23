@@ -1,0 +1,33 @@
+{
+  "name": "jquery.safetynet",
+  "title": "jQuery SafetyNet",
+  "description": "jQuery SafetyNet stores form data in localStorage in case you lose network connectivity (think mobile)",
+  "version": "0.1.0",
+  "homepage": "https://github.com/rubysolo/jquery-safetynet",
+  "author": {
+    "name": "Solomon White",
+    "email": "rubysolo@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rubysolo/jquery-safetynet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rubysolo/jquery-safetynet/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/rubysolo/jquery-safetynet/blob/master/LICENSE-MIT"
+    },
+    {
+      "type": "GPL",
+      "url": "https://github.com/rubysolo/jquery-safetynet/blob/master/LICENSE-GPL"
+    }
+  ],
+  "dependencies": {
+    "jquery": "~1.5",
+    "jquery-deserialize": "~1.1.4"
+  },
+  "keywords": []
+}
