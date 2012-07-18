@@ -19,7 +19,6 @@ Licensed under the MIT, GPL licenses.
 
     saveProgress: (e) ->
       localStorage.setItem(backupManager.formKey(this), $(this).serialize())
-      e.stopPropagation()
 
     restoreProgress: (form) ->
       key = backupManager.formKey(form)

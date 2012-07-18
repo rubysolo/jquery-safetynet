@@ -1,4 +1,4 @@
-/*! jQuery SafetyNet - v0.1.0 - 2012-06-23
+/*! jQuery SafetyNet - v0.1.1 - 2012-06-25
 * https://github.com/rubysolo/jquery-safetynet
 * Copyright (c) 2012 Solomon White; Licensed MIT, GPL */
 
@@ -19,8 +19,7 @@
     };
 
     SafetyNet.prototype.saveProgress = function(e) {
-      localStorage.setItem(backupManager.formKey(this), $(this).serialize());
-      return e.stopPropagation();
+      return localStorage.setItem(backupManager.formKey(this), $(this).serialize());
     };
 
     SafetyNet.prototype.restoreProgress = function(form) {

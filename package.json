@@ -2,7 +2,7 @@
   "name": "jquery.safetynet",
   "title": "jQuery SafetyNet",
   "description": "jQuery SafetyNet stores form data in localStorage in case you lose network connectivity (think mobile)",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/rubysolo/jquery-safetynet",
   "author": {
     "name": "Solomon White",

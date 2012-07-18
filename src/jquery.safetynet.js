@@ -24,8 +24,7 @@ Licensed under the MIT, GPL licenses.
     };
 
     SafetyNet.prototype.saveProgress = function(e) {
-      localStorage.setItem(backupManager.formKey(this), $(this).serialize());
-      return e.stopPropagation();
+      return localStorage.setItem(backupManager.formKey(this), $(this).serialize());
     };
 
     SafetyNet.prototype.restoreProgress = function(form) {
