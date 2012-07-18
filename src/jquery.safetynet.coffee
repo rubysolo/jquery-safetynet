@@ -13,7 +13,8 @@ Licensed under the MIT, GPL licenses.
   class SafetyNet
     constructor: (@options={}) ->
       @pendingRequests = JSON.parse(localStorage.getItem('offline-backups') || '[]')
-      window.addEventListener 'online', @submitPendingRequests
+      eventer = window[if window.addEventListener then "addEventListener" else "attachEvent"]
+      eventer 'online', @submitPendingRequests
 
     formKey: (form) -> $(form).attr('id') || $(form).attr('action')
 

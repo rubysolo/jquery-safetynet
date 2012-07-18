@@ -14,9 +14,11 @@ Licensed under the MIT, GPL licenses.
     SafetyNet.name = 'SafetyNet';
 
     function SafetyNet(options) {
+      var eventer;
       this.options = options != null ? options : {};
       this.pendingRequests = JSON.parse(localStorage.getItem('offline-backups') || '[]');
-      window.addEventListener('online', this.submitPendingRequests);
+      eventer = window[window.addEventListener ? "addEventListener" : "attachEvent"];
+      eventer('online', this.submitPendingRequests);
     }
 
     SafetyNet.prototype.formKey = function(form) {

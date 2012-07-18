@@ -1,4 +1,4 @@
-/*! jQuery SafetyNet - v0.1.1 - 2012-06-25
+/*! jQuery SafetyNet - v0.1.2 - 2012-07-18
 * https://github.com/rubysolo/jquery-safetynet
 * Copyright (c) 2012 Solomon White; Licensed MIT, GPL */
 
@@ -9,9 +9,11 @@
     SafetyNet.name = 'SafetyNet';
 
     function SafetyNet(options) {
+      var eventer;
       this.options = options != null ? options : {};
       this.pendingRequests = JSON.parse(localStorage.getItem('offline-backups') || '[]');
-      window.addEventListener('online', this.submitPendingRequests);
+      eventer = window[window.addEventListener ? "addEventListener" : "attachEvent"];
+      eventer('online', this.submitPendingRequests);
     }
 
     SafetyNet.prototype.formKey = function(form) {
